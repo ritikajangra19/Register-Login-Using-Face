@@ -13,10 +13,15 @@ This project is a facial recognition-based login and registration system built u
 ## 📂 Project Structure
 
 registration-login/
+
 ├── Face_Detection/ # Django app with views, models, forms
+
 ├── FaceDetection/ # Main project folder with settings.py
+
 ├── templates/ # HTML templates
+
 ├── media/ # Media files
+
 └── manage.py
 
 
