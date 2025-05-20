@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #1e3c72, #3f619b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        background: linear-gradient(to right, #a0aec0, #4a5568);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .errorlist {
+        color: #e74c3c;
+        margin: 5px 0;
+        list-style: none;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+      }
+
+      form h3 {
+        text-align: center;
+        color: #34495e;
+        margin-bottom: 20px;
+      }
+
+      .row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="file"],
+      textarea,
+      select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="number"]:focus,
+      input[type="file"]:focus,
+      textarea:focus,
+      select:focus {
+        border-color: none;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(74, 85, 104, 0.3); /* Optional subtle shadow */
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-top: 10px;
+        margin-right: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      input[type="reset"] {
+        background-color: #e74c3c;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      input[type="reset"]:hover {
+        background-color: #c0392b;
+      }
+
+      @media (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+
+        form {
+          padding: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h1>Edit Profile</h1>
+
+      <div class="row">
+        <div class="form-group">
+          {{ form.face_id }} {% for error in form.face_id.errors %}
+          <span class="errorlist">{{ error }}</span>
+          {% endfor %}
+        </div>
+
+        <div class="form-group">
+          {{ form.name }} {% for error in form.name.errors %}
+          <span class="errorlist">{{ error }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="form-group">
+        {{ form.address }} {% for error in form.address.errors %}
+        <span class="errorlist">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.job }} {% for error in form.job.errors %}
+        <span class="errorlist">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.phone }} {% for error in form.phone.errors %}
+        <span class="errorlist">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.email }} {% for error in form.email.errors %}
+        <span class="errorlist">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.bio }} {% for error in form.bio.errors %}
+        <span class="errorlist">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.image }} {% for error in form.image.errors %}
+        <span class="errorlist">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <input type="submit" value="Update" />
+      <a href="{% url 'greeting' user.face_id %}" style="text-decoration: none">
+        <input type="reset" value="Cancel" />
+      </a>
+    </form>
+  </body>
+</html>

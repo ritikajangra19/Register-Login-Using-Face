@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Greetings Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #90cdf4, #2b6cb0);
+        color: #fff;
+        padding: 30px;
+      }
+      .container {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      .profile-details {
+        margin-top: 20px;
+      }
+      .profile-details p {
+        margin: 10px 0;
+      }
+      .actions {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .actions a {
+        background-color: #ffffff;
+        color: #2b6cb0;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .actions a:hover {
+        background-color: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome, {{ user.name }} 👋</h1>
+
+      <div class="profile-details">
+        <p><strong>Face ID:</strong> {{ user.face_id }}</p>
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Address:</strong> {{ user.address }}</p>
+        <p><strong>Job:</strong> {{ user.job }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Bio:</strong> {{ user.bio }}</p>
+        {% if user.image %}
+        <p>
+          <strong>Image:</strong><br /><img
+            src="{{ user.image.url }}"
+            width="200"
+            alt="Profile Image"
+          />
+        </p>
+        {% endif %}
+      </div>
+
+      <div class="actions">
+        <a href="{% url 'edit_profile' user.face_id %}">Edit Profile</a>
+        <a href="{% url 'delete_profile' user.face_id %}">Delete Profile</a>
+      </div>
+    </div>
+  </body>
+</html>
