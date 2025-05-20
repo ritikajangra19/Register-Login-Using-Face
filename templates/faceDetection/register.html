@@ -13,7 +13,7 @@
 
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(to right, #1e3c72, #3f619b);
+        background: linear-gradient(to right,rgb(20, 45, 56),rgb(30, 59, 69), #2c5364);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -42,7 +42,7 @@
       }
 
       form {
-        background-color: white;
+        background-color: rgba(20, 30, 40, 0.8);
         padding: 30px;
         border-radius: 12px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -81,9 +81,11 @@
       textarea,
       select {
         padding: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid #444;
         border-radius: 6px;
         font-size: 1rem;
+        background-color: transparent;
+        color: white;
       }
 
       input[type="text"]:focus,
@@ -94,13 +96,12 @@
       select:focus {
         border-color: none;
         outline: none;
-        box-shadow: 0 0 0 2px rgba(74, 85, 104, 0.3); /* Optional subtle shadow */
         transition: border-color 0.3s, box-shadow 0.3s;
       }
 
       input[type="submit"],
       input[type="reset"] {
-        background-color: #4caf50;
+        background-color: #374A67;
         color: white;
         border: none;
         padding: 10px 20px;
@@ -113,15 +114,17 @@
       }
 
       input[type="reset"] {
-        background-color: #e74c3c;
+        background-color: white!important;
+        color: #374A67;
       }
 
       input[type="submit"]:hover {
-        background-color: #3e8e41;
+        background-color: #CB9CF2 ;
       }
 
       input[type="reset"]:hover {
-        background-color: #c0392b;
+        background-color: #c0392b!important;
+        color: white!important;
       }
 
       @media (max-width: 600px) {
