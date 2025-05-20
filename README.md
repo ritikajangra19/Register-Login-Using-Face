@@ -26,6 +26,7 @@ registration-login/
 
 
 # Requirements
+
 - Basic Django
 - Basic Python and knowledge of OOP
 - A good IDE like VSCode
@@ -34,11 +35,13 @@ registration-login/
 # Installation Requirements
 
 - Linux:
+- 
 ``` pip3 install django ```
 
 ``` pip3 in opencv-python==3.4.2.17 ```
 
 - Windows:
+- 
 ``` pip install django ```
 
 ``` pip3 in opencv-python==3.4.2.17 ```
