@@ -60,6 +60,8 @@ Clone the repo (if not already):
 
 ``` python3 manage.py startapp Face_Detection ``` - **For Creating App**  
 
+``` python manage.py createsuperuser``` - **Creates superuser**
+
 ``` python3 manage.py makemigrations``` - **Migrations Model**  
 
 ``` python3 manage.py migrate```- **For migrating to Database** 
@@ -72,6 +74,21 @@ Clone the repo (if not already):
 http://127.0.0.1:8000/
 
 # UI:
+
+**Home Page**
+
+<img width="959" alt="home page" src="https://github.com/user-attachments/assets/49fbe7e3-1a45-4d3c-b565-59f4c19f3a3e" />
+
+**Registration page** 
+
+<img width="943" alt="registration1" src="https://github.com/user-attachments/assets/71cb7ad2-e33a-456d-ba3d-015363938ee4" />
+
+
+**Registration Page**
+
+<img width="938" alt="registration2" src="https://github.com/user-attachments/assets/8e9adcf4-1dec-4b45-9887-eeb5a4765616" />
+
+**Greetings Page**
 
 <img width="953" alt="image" src="https://github.com/user-attachments/assets/2e433b97-9c3c-48d2-b2db-0a7d9decea2d" />
 
