@@ -34,14 +34,14 @@ registration-login/
 
 # Installation Requirements
 
-- Linux:
-- 
+ Linux:
+ 
 ``` pip3 install django ```
 
 ``` pip3 in opencv-python==3.4.2.17 ```
 
-- Windows:
-- 
+ Windows:
+ 
 ``` pip install django ```
 
 ``` pip3 in opencv-python==3.4.2.17 ```
