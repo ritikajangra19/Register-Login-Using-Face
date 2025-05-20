@@ -54,15 +54,6 @@ Clone the repo (if not already):
 
 ``` Create a virtual environment (optional but recommended): ```
 
-
-# Important command for this project-
-
-``` python manage.py createsuperuser``` - **Creates superuser**
-
-``` python3 manage.py makemigrations``` - **Migrations Model**  
-
-``` python3 manage.py migrate```- **For migrating to Database** 
-
 ``` python3 manage.py runserver```- **For running server** 
 
 
