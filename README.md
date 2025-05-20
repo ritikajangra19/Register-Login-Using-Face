@@ -27,10 +27,11 @@ registration-login/
 
 # Requirements
 - Basic Django
-- Basic Python and knowledge about OOP
+- Basic Python and knowledge of OOP
 - A good IDE like VSCode
+- Knowledge on Opencv and face_recognition
 
-# Instalisation
+# Installation Requirements
 
 - Linux:
 ``` pip3 install django ```
@@ -53,12 +54,8 @@ Clone the repo (if not already):
 
 ``` Create a virtual environment (optional but recommended): ```
 
-# Project creation command:
-``` django-admin startproject FaceDetection```
 
 # Important command for this project-
-
-``` python3 manage.py startapp Face_Detection ``` - **For Creating App**  
 
 ``` python manage.py createsuperuser``` - **Creates superuser**
 
