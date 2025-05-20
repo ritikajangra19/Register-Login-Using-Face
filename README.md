@@ -44,24 +44,34 @@ registration-login/
 
 
 # 🚀 How to Run the Project
+
 Clone the repo (if not already):
 
 ``` git clone https://github.com/yourusername/your-repo-name.git ```
+
 ``` cd your-repo-name ```
+
 ``` Create a virtual environment (optional but recommended): ```
 
 # Project creation command:
 ``` django-admin startproject FaceDetection```
 
 # Important command for this project-
+
 ``` python3 manage.py startapp Face_Detection ``` - **For Creating App**  
+
 ``` python3 manage.py makemigrations``` - **Migrations Model**  
+
 ``` python3 manage.py migrate```- **For migrating to Database** 
+
 ``` python3 manage.py runserver```- **For running server** 
 
+
 # Open your browser and go to:
+
 http://127.0.0.1:8000/
 
 # Descriptions
+
 This is an ML-based face recognition system. Using that we can register and recognize the face of a person.
 
