@@ -71,6 +71,12 @@ Clone the repo (if not already):
 
 http://127.0.0.1:8000/
 
+# UI:
+
+<img width="953" alt="image" src="https://github.com/user-attachments/assets/2e433b97-9c3c-48d2-b2db-0a7d9decea2d" />
+
+
+
 # Descriptions
 
 This is an ML-based face recognition system. Using that we can register and recognize the face of a person.
